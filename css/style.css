@@ -5,6 +5,10 @@ body{
 html{
 	font-size: 10px;
 }
+a:active, a:visited, a:focus {
+	text-decoration: none;
+	outline: none;
+}
 .wrapper{
 	display: table-cell;
     vertical-align: middle;
@@ -64,7 +68,7 @@ html{
 	border-color: #fff;
 }
 .portfolio {
-	padding: 10rem 0px;
+	padding: 1rem 0px;
 	text-align: center;
 }
 .section-header {
