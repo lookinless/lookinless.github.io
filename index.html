@@ -34,30 +34,30 @@
         <p>ВСЁ<br>КЛУБНИЧБНО</p>
       </div>
       </div>
-      <a class="main-down" href "#"><i class="icon-down"></i></a>
+      <a class="main-down slowly" href="#portfolio"><i class="icon-down"></i></a>
     </div>
       
       
-<div class="portfolio">
+<div class="portfolio" id="portfolio">
     <div class="container">
         <h2 class="section-header">Выбирай песеля</h2>
         <div class="row">
               <div class="col-md-4">
                     <div class="portfolio-block">
                     <img src = "img/portfolio/1.jpg" alt="хас">
-                    <a data-toggle="modal" data-work='work-1' href="#work">нет</a>
+                    <a data-toggle="modal" data-work='work-1' href="#work">хас</a>
                     </div>
                 </div>
               <div class="col-md-4">
                     <div class="portfolio-block">
 				    <img src="img/portfolio/2.jpg" alt="корг">
-				    <a data-toggle="modal" data-work='work-2' href="#work">да</a>
+				    <a data-toggle="modal" data-work='work-2' href="#work">корг</a>
 				    </div>
               </div>
               <div class="col-md-4">
                   <div class="portfolio-block">
                       <img src="img/portfolio/3.jpg" alt="шпиц">
-                      <a data-toggle="modal" data-work='work-3' href="#work">нет</a>
+                      <a data-toggle="modal" data-work='work-3' href="#work">щпиц</a>
                   </div>
                 </div>
              </div>
@@ -74,8 +74,8 @@
               <div class="col-md-6">
 							<strong>Подпишитесь</strong>
 							<div class="social-links">
-								<a href="#"><i class="icon-vk"></i></a>
-								<a href="#"><i class="icon-inst"></i></a>
+								<a href="https://vk.com/okmn20"><i class="icon-vk"></i></a>
+								<a href="https://www.instagram.com/lookinless/"><i class="icon-inst"></i></a>
 								<a href="https://t.me/lookinless"><i class="icon-tg"></i></a>
 							</div>
               </div>
@@ -101,7 +101,7 @@
 			  </div>
 			</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
        <script src="js/bootstrap.min.js"></script>
     <script>
     	$(function() {
@@ -112,5 +112,17 @@
     			modal.find('.modal-body').load(work+'.html');
     		});
     	}) </script>
+      
+    <script>
+      $(document).ready(function() {
+        $('.slowly').on("click", function(event) {
+          event.preventDefault();
+          var id = $(this).attr('href'),
+          top = $(id).offset().top;
+          $('body,html').animate({scrollTop: top}, 500);
+        });
+      });
+    </script>
+
   </body>
 </html>
